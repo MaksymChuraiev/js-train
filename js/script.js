@@ -305,3 +305,69 @@
 //         console.log(size);
 //     }
 // }
+
+// ===================== Function ==========================
+
+// function getSum() {
+//     let numOne, numTwo;
+//     function getNumOne() {
+//         numOne = 1;        
+//     }
+//     function getNumTwo() {
+//         numTwo = 2;
+//     }
+//     getNumOne();
+//     getNumTwo();
+//     let numSum = numOne + numTwo;
+//     console.log(numSum);
+// }
+// getSum();
+// getSum();
+// getSum();
+
+
+// let message;
+// function showMessage() {
+//     message = 'Hello';
+// }
+// showMessage();
+// console.log(message);
+
+// function calcSum(numOne, numTwo) {
+//     console.log(`Var numOne:${numOne}`);
+//     console.log(`Var numTwo:${numTwo}`);
+//     let numSum = numOne + numTwo;
+//     console.log(`Sum:${numSum}`);
+// }
+// calcSum(10, 2);
+
+// let getMessage = (text, names) => text + ', ' + names + '!';
+// console.log(getMessage('hello', 'Vasil'));
+
+// function showMessage(text, names) {
+//     console.log(`${text}, ${names}!`);
+// }
+// setTimeout(showMessage, 3000, 'Hello', 'Vasil');
+
+// function showMessage(text, names) {
+//     console.log(`${text}, ${names}!`);
+// }
+// setInterval(showMessage, 500, 'Hello', 'Vasil');
+
+// function showNumber(num) {
+//     console.log(num);
+//     if (num<5) {
+//         setTimeout(showNumber, 1000, num+=1)
+//     }
+// }
+// setTimeout(showNumber, 1000, 1);
+
+// function showNumber(num) {
+//     console.log(num);
+//     let timeId = setTimeout(showNumber, 1000, num += 1);
+//     if (num === 6) {
+//         clearTimeout(timeId);
+//     }
+// }
+// setTimeout(showNumber, 1000, 1);
+
