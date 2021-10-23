@@ -4,6 +4,8 @@
 // let myLifeStyle = 'freelance'
 // console.log(myLifeStyle)
 
+
+
 // ---------============-----область видимости---==========------
 
 
@@ -16,11 +18,7 @@
 // testBlock();
 // console.log(myAge);
 
-// -----============-------цифры подряд------==============-----
 
-// for (let i = 0; i < 10; i += 1) {
-//     console.log(i)    
-// }
 
 //  ------=============----константа и изменение её-----=======------
 
@@ -35,6 +33,8 @@
 // userProfile.age = 18;
 // console.log(userProfile);
 
+
+
 // -------==================----вар, отличие---------==================-----
 
 // age = 35;
@@ -46,6 +46,48 @@
 // }
 
 // console.log(sizeVar);
+
+
+
+// =================== Number ==========================
+// const someNum = 1e6; //1000000
+// console.log(someNum);
+
+// const someLittleNum = 1e-6; //0.000001
+// console.log(someLittleNum);
+
+// console.log(0xff);
+// console.log(0b11111111);
+// console.log(0o377);
+// let num = 255;
+// console.log(num.toString(16));
+// console.log(num.toString(8));
+// console.log(num.toString(2));
+
+// let numOne = Math.round(5.8);     //Округляется до целого числа.
+// console.log(numOne);
+
+// let numOne = Math.round(5.845 * 10) / 10;     //Округляется до 5.8.
+// console.log(numOne);
+
+// let numOne = 5.845;                     //Округляется до 1 числа после точки.
+// console.log(numOne.toFixed(1));          // строка
+// console.log(Number(numOne.toFixed(1)));    //число
+
+// let numOne = Math.round(5.845 * 100) / 100;     //Округляется до 5.85.
+// console.log(numOne);
+
+// let sourceNum = 1.005 + Number.EPSILON;           // Округляет более точно до 1.01
+// let numFour = Math.round(sourceNum * 100) / 100;
+// console.log(numFour);
+
+// let numOne = Math.floor(5.8);  //Округляется в меншую сторону.
+// console.log(numOne);
+
+// let numOne = Math.ceil(5.8);  //Округляется в большую сторону.
+// console.log(numOne);
+
+
 
 // ----------=============--Typeof------------================-----
 
@@ -73,6 +115,8 @@
 // userName = function name(params) {    
 // }
 // console.log(typeof userName);
+
+
 
 // ---------==========-------Строковое преобразование-------=======-
 
@@ -114,6 +158,8 @@
 
 // console.log(userAge);
 // console.log(typeof userAge);
+
+
 
 // ==========================Operators=======================
 
@@ -184,6 +230,8 @@
 // users *= 2;
 // console.log(users);
 
+
+
 // ============== Логический оператор || ИЛИ ,&& И================
 
 // let userName = '';
@@ -203,6 +251,8 @@
 // console.log(1 && 0 || 2 && 1);
 
 // console.log(!false && 11 || 18 && !'');
+
+
 
 // ==========================IF==================================
 
@@ -227,6 +277,8 @@
 //     console.log(message);
 // } 
 
+
+
 // ===============================  ?  =======================
 
 // let message = 'hello';
@@ -243,6 +295,8 @@
 // message += messageEnd;
 // console.log(message);
 
+
+
 // ===================== While ===================
 
 // let num = 0;
@@ -257,6 +311,8 @@
 //     num += 1;
 // } while (num < 5);
 
+
+
 // ============================ For =================
 
 // for (let num = 0; num < 5; num += 1) {
@@ -269,6 +325,8 @@
 //     num += 1;    
 // }
 
+
+
 // =========================== Break ====================
 
 // let num = 0;
@@ -278,6 +336,8 @@
 // }
 // console.log(`off, num = ${num}`)
 
+
+
 // ======================== Continue ==================
 
 // let num = 0;
@@ -285,6 +345,8 @@
 //     if (num == 2) continue;
 //     console.log(num);
 // }
+
+
 
 // ================== FirstFor =========================
 
@@ -305,6 +367,8 @@
 //         console.log(size);
 //     }
 // }
+
+
 
 // ===================== Function ==========================
 
@@ -371,3 +435,146 @@
 // }
 // setTimeout(showNumber, 1000, 1);
 
+// function UserInfo(name) {
+//     this.name = name;
+//     this.age = 30;
+// }
+// console.log(new UserInfo('Vasil'));
+// console.log(new UserInfo('Stas'));
+
+
+
+
+// ================== Object ---------====================
+
+// let userInfo = {
+//     name: "Vasil",
+//     age: 30,
+// };
+// console.log(userInfo);
+// console.log(userInfo.name);
+
+// let userInfo = {
+//     name: "Vasil",
+//     age: 30,
+//     address: {
+//         city: 'Merefa',
+//         street: 'Ribalko',
+//     }
+// };
+// console.log(userInfo);
+// console.log(userInfo.name);
+// console.log(userInfo.address);
+// console.log(userInfo.address.city);
+
+// function makeUserInfo(name, age) {
+//     return {
+//         name: name,
+//         age: age,
+//         // name,
+//         // age,
+//     };
+// }
+// let user = makeUserInfo('Vasil', 30);
+// console.log(user);
+
+// let userInfo = {
+//     name: "Vasil",
+//     age: 30,
+// };
+// let user = Object.assign({}, userInfo);
+// user.age = 18;
+// console.log(userInfo);
+// console.log(user);
+
+// let userInfo = {
+//     name: "Vasil",
+//     age: 30,
+//     address: {
+//         city: 'Merefa',
+//         street: 'Ribalko',
+//     }
+// };
+// if ('name' in userInfo) {
+//    console.log(userInfo.name); 
+// }
+
+// let userInfo = {
+//     name: "Vasil",
+//     age: 30,
+//     address: {
+//         city: 'Merefa',
+//         street: 'Ribalko',
+//     }
+// };
+// for (let key in userInfo) {
+//     console.log(key);
+//     console.log(userInfo[key]);
+// }
+// for (let key in userInfo.address) {
+//     console.log(key);
+//     console.log(userInfo.address[key]);
+// }
+
+// let userInfo = {
+//     name: "Vasil",
+//     age: 30,
+//     address: {
+//         city: 'Merefa',
+//         street: 'Ribalko',
+//     },
+//     showInfo() {
+//     // console.log(`${userInfo.name}, ${userInfo.age} year. Address: c.${userInfo.address.city}, str.${userInfo.address.street}.`);
+//        console.log(`${this.name}, ${this.age} year. Address: c.${this.address.city}, str.${this.address.street}.`); 
+// }
+// }
+// userInfo.showInfo();
+
+
+
+// =================== Спецсимвол ====================
+
+// let textTwo = 'Hello!\nYou are in chanel\nFreelancer';
+// console.log(textTwo);
+
+// let textTwo = 'Hello!\n\tYou are in chanel\n\t\tFreelancer';
+// console.log(textTwo);
+
+// let textTwo = 'Hello! You are in chanel Freelancer \\ IT and freelance';
+// console.log(textTwo);
+
+// let textTwo = 'Hello! You are in chanel \'Freelancer\'';
+// console.log(textTwo);
+
+// let textTwo = 'Hello';
+// console.log(textTwo.length);
+
+// let textTwo = 'abcdefghi';
+// let firstSymbol = textTwo[0];
+// let lastSymbol = textTwo[textTwo.length - 1];
+// console.log(firstSymbol);
+// console.log(lastSymbol);
+// for (const char of textTwo) {
+//     console.log(char);
+// }
+
+// let text = 'Hello';
+// console.log(text.toUpperCase());
+// console.log(text.toLowerCase());
+
+// let text = 'Hello';
+// console.log(text.indexOf('lo'));
+// console.log(text.indexOf('lo', 2));
+
+// let text = 'Hello';
+// console.log(text.includes('lo'));
+// console.log(text.includes('lo', 3));
+// console.log(text.startsWith('He'));
+// console.log(text.endsWith('lo'));
+// let searchText = 'he';
+// console.log(text.toLowerCase().includes(searchText.toLowerCase()));
+
+// let text = 'abcdefghi';
+// console.log(text.slice(1, 5));
+// console.log(text.slice(-5, -1));
+// console.log(text.slice(1));
