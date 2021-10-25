@@ -579,6 +579,8 @@
 // console.log(text.slice(-5, -1));
 // console.log(text.slice(1));
 
+
+
 // You need to calculate amount of tip to give in a restaurant/cafe.
 // 	Workflow:
 // 1.	User inputs check number. (Use “prompt” function).
@@ -595,20 +597,20 @@
 
 // You should show only 2 numbers after comma (if needed).
 
-const cost = prompt('check number');
-const procent = prompt('Tip percentage');
+// const cost = prompt('check number');
+// const procent = prompt('Tip percentage');
 
-if (cost === null || procent === null) {
-    alert('Cancelled');
-} else {
-    const formatedCost = Number.parseFloat(cost);
-    const formatedProcent = Number.parseFloat(procent);
-    if (Number.isNaN(formatedCost) || Number.isNaN(formatedProcent)
-        || formatedCost < 0 || formatedProcent < 0 || formatedProcent > 100) {
-      alert('Invalid input data');
-    } else {
-        const allProcent = Number((formatedProcent / 100 * formatedCost).toFixed(2));
-        const allSum = formatedCost + allProcent;
-        alert(`Check number: ${formatedCost}\nTip: ${formatedProcent}%\nTip amount: ${allProcent}\nTotal sum to pay: ${allSum} `);
-    }
-}
+// if (cost === null || procent === null) {
+//     alert('Cancelled');
+// } else {
+//     const formatedCost = Number.parseFloat(cost);
+//     const formatedProcent = Number.parseFloat(procent);
+//     if (Number.isNaN(formatedCost) || Number.isNaN(formatedProcent)
+//         || formatedCost < 0 || formatedProcent < 0 || formatedProcent > 100) {
+//       alert('Invalid input data');
+//     } else {
+//         const allProcent = Number((formatedProcent / 100 * formatedCost).toFixed(2));
+//         const allSum = formatedCost + allProcent;
+//         alert(`Check number: ${formatedCost}\nTip: ${formatedProcent}%\nTip amount: ${allProcent}\nTotal sum to pay: ${allSum} `);
+//     }
+// }
