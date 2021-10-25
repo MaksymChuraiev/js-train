@@ -581,36 +581,200 @@
 
 
 
-// You need to calculate amount of tip to give in a restaurant/cafe.
-// 	Workflow:
-// 1.	User inputs check number. (Use “prompt” function).
-// 2.	User inputs tip percentage. (Use “prompt” function)
-// 3.	You need to validate the input data: both values should be numbers, total sum can’t be
-// a negative number, percentage can’t be negative and bigger than 100.
-// 4.	If input data isn’t valid, you should show message “Invalid input data”. (Use “alert” function).
-// 5.	You need to calculate tip amount and total sum to pay.
-// 6.	Show message: (example). Use ”alert” function
-// Check number: 200
-// Tip: 15%
-// Tip amount: 30
-// Total sum to pay:  230
 
-// You should show only 2 numbers after comma (if needed).
 
-// const cost = prompt('check number');
-// const procent = prompt('Tip percentage');
 
-// if (cost === null || procent === null) {
-//     alert('Cancelled');
-// } else {
-//     const formatedCost = Number.parseFloat(cost);
-//     const formatedProcent = Number.parseFloat(procent);
-//     if (Number.isNaN(formatedCost) || Number.isNaN(formatedProcent)
-//         || formatedCost < 0 || formatedProcent < 0 || formatedProcent > 100) {
-//       alert('Invalid input data');
-//     } else {
-//         const allProcent = Number((formatedProcent / 100 * formatedCost).toFixed(2));
-//         const allSum = formatedCost + allProcent;
-//         alert(`Check number: ${formatedCost}\nTip: ${formatedProcent}%\nTip amount: ${allProcent}\nTotal sum to pay: ${allSum} `);
-//     }
+// ====================== Massive =======================
+
+// ======================Добавляет в начало =============
+
+// let arr = ['Vasil', 'Valera', 'Stas',];
+// arr.unshift('Artem');
+// console.log(arr);
+// arr.unshift('Dima', 'Fedor',);
+// console.log(arr);
+
+
+// ====================== Добавляет в конец  ==============
+
+// let arr = ['Vasil', 'Valera', 'Stas',];
+// arr.push('Artem');
+// console.log(arr);
+// arr.push('Dima', 'Fedor',);
+// console.log(arr);
+
+// ====================== Удаляет первый ==============
+
+// let arr = ['Vasil', 'Valera', 'Stas',];
+// arr.shift();
+// console.log(arr);
+
+// ======================= Удаляет последний =============
+
+// let arr = ['Vasil', 'Valera', 'Stas',];
+// arr.pop();
+// console.log(arr);
+
+// ======================= Удаляет элемент ==============
+
+// let arr = ['Vasil', 'Valera', 'Stas',];
+// arr.splice(1, 1);
+// console.log(arr);
+
+// let arr = ['Vasil', 'Valera', 'Stas',];
+// arr.splice(-1, 1, );
+// console.log(arr);
+
+// ======================== Заменяет элемент ============
+
+// let arr = ['Vasil', 'Valera', 'Stas',];
+// arr.splice(1, 1, 'Artem');
+// console.log(arr);
+
+// ========================= Добавляет элемент =========
+
+// let arr = ['Vasil', 'Valera', 'Stas',];
+// arr.splice(1, 0, 'Artem', 'Dima' );
+// console.log(arr);
+
+// let arr = ['Vasil', 'Valera', 'Stas',];
+// let arrTwo = arr.concat('Artem');
+// console.log(arrTwo);
+
+// ========================= Копирует элемент ===============
+
+// let arr = ['Vasil', 'Valera', 'Stas',];
+// let remove = arr.splice(1, 1);
+// console.log(remove);
+
+// let arr = ['Vasil', 'Valera', 'Stas',];
+// let remove = arr.slice(1, 2);
+// console.log(remove);
+// let removeTwo = arr.slice(-2, -1);
+// console.log(removeTwo);
+// let removeThree = arr.slice();
+// console.log(removeThree);
+
+// =========================== Поиск элементов =====================
+
+// let arr = ['Vasil', 'Valera', 'Stas',];
+// console.log(arr.indexOf('Valera'))
+// console.log(arr.includes('Valera'))
+
+// let arr = [
+//     { nam: 'Vasil', age: 36 },
+//     { nam: 'Valera', age: 18 },
+//     { nam: 'Stas', age: 'No'},
+// ]
+// let resultOne = arr.find(function (item, index, array) {
+//     return item.age === 18;
+// });
+// console.log(resultOne);
+
+// let arr = [
+//     { nam: 'Vasil', age: 36 },
+//     { nam: 'Valera', age: 18 },
+//     { nam: 'Stas', age: 'No'},
+// ]
+// let resultOne = arr.find(item => item.age === 18);
+// console.log(resultOne);
+// let resultTwo = arr.findIndex(item => item.age === 36);
+// console.log(resultTwo);
+
+// let arr = [
+//     { nam: 'Vasil', age: 36 },
+//     { nam: 'Valera', age: 18 },
+//     { nam: 'Artem', age: 18 },
+//     { nam: 'Stas', age: 'No'},
+// ]
+// let resultOne = arr.filter(function (item, index, array) {
+//     return item.age === 18;
+// });
+// console.log(resultOne);
+
+// ====================== Сортирует элементы =======================
+
+// let arr = ['Vasil', 'Artem', 'Stas',];
+// console.log(arr.sort());
+
+// let arrTwo = ['Vasil', 'Artem', 'Stas',];
+// console.log(arrTwo.reverse());
+
+// let arr = [8, 22, 1,];
+// console.log(arr.sort());
+
+// let arr = [8, 22, 1,];
+// function compareNum(a, b) {
+//         return a - b
 // }
+// console.log(arr.sort(compareNum));
+
+// let arr = [8, 22, 1, 7, 44, 103, 1];
+// console.log(arr.sort((a, b) => a - b));
+
+// ========================= Преобразует ==========================
+
+// let arr = ['Vasil', 'Artem', 'Stas',];
+// let result = arr.map(function (item, index, array) {
+//     return item[0];
+// });
+// console.log(arr);
+// console.log(result);
+
+// let arr = ['Vasil', 'Artem', 'Stas',];
+// let result = arr.map(item => item[0]);
+// console.log(arr);
+// console.log(result);
+
+// let str = 'Vasil,Artem,Stas';
+// let arr = str.split(',');
+// console.log(arr);
+
+// let str = 'Vasil,Artem,Stas';
+// let arr = str.split(',', 2);
+// console.log(arr);
+
+// let arr = ['Vasil', 'Artem', 'Stas',];
+// let srt = arr.join(', ');
+// console.log(srt);
+
+// =============================== Проверка на массив =================
+
+// let obj = {};
+// let arr = [];
+// if (Array.isArray(arr)) {
+//     console.log('Yes');
+// } else {
+//     console.log('No');
+// }
+
+// ========================= Перебор элементов ========================
+
+// let arr = ['Vasil', 'Artem', 'Stas',];
+// console.log(arr.length);
+// for (let i = 0; i < arr.length; i += 1) {
+//     console.log(arr[i]);
+// }
+
+// let arr = ['Vasil', 'Artem', 'Stas',];
+// for (let arrItem of arr) {
+//     console.log(arrItem);
+// }
+
+// let arr = ['Vasil', 'Artem', 'Stas', 'Dima',];
+// arr.forEach(function (item, index, array) {
+//     console.log(`${item} is on ${index} position from ${array}`);
+// });
+
+// let arr = ['Vasil', 'Artem', 'Stas', 'Dima',];
+// arr.forEach((item, index, array) => {
+//     console.log(`${item} is on ${index} position from ${array}`);
+// });
+
+// ============================== Сумма ======================
+
+// let arr = [1, 2, 3, 4, 5,];
+// let reduceValueOne = arr.reduce(function (previousValue, item, index, array) {
+//     return item + previousValue;
+// }, 0);
+// console.log(reduceValueOne);
