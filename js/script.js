@@ -778,3 +778,26 @@
 //     return item + previousValue;
 // }, 0);
 // console.log(reduceValueOne);
+
+
+// =========================== DOM ==================================
+
+// alert('Hello');
+
+// const confirmResult = confirm('Do you knew JS?');
+// console.log(confirmResult);
+
+// const promptResult = prompt('Who are you?');
+// console.log(promptResult);
+
+const htmlElement = document.documentElement;
+const headElement = document.head;
+const bodyElement = document.body;
+console.log(htmlElement);
+console.log(headElement);
+console.log(bodyElement);
+
+// const bodyElement = document.body;
+// const firstChildNode = bodyElement.firstChild;
+// const lastChildNode = bodyElement.lastChild;
+// console.log(bodyElement);
