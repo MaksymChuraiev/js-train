@@ -1,12 +1,11 @@
 // ------------------------------------------
-
 // const userColorIyes = 'blue';
 // let userName = 'Vasil';
 // let user = userName;
 // console.log(user);
 
-// ---------------------------------------------
 
+// ---------------------------------------------
 // You need to calculate amount of tip to give in a restaurant/cafe.
 // 	Workflow:
 // 1.	User inputs check number. (Use “prompt” function).
@@ -40,3 +39,273 @@
 //         alert(`Check number: ${formatedCost}\nTip: ${formatedProcent}%\nTip amount: ${allProcent}\nTotal sum to pay: ${allSum} `);
 //     }
 // }
+
+
+// =====================================================================
+/*
+ * Посчитать общую сумму покупок в корзине
+ */
+
+// const cart = [54, 28, 105, 70, 92, 17, 120, 12, 25, 90];
+// let total = 0;
+// for (let i = 0; i < cart.length; i += 1) {
+//     // console.log(cart[i]);
+//     total += cart[i];
+// }
+// console.log('Total: ', total);
+
+// const cart = [54, 28, 105, 70, 92, 17, 120, 12, 25, 90];
+// let total = 0;
+// for (const value of cart) {
+//     total += value;
+// }
+// console.log('Total: ', total);
+
+
+
+// =================================================================
+/*
+ * Напиши скрипт который подсчитывает сумму всех чётных чисел в массиве.
+ */
+
+// const numbers = [1, 5, 8, 9, 12, 4, 15, 27, 30, 18, 11];
+// let total = 0;
+// for (let i = 0; i < numbers.length; i += 1) {
+//     const number = numbers[i];
+//     if (number % 2 === 0) {
+//         total += number;
+//     }
+// }
+// console.log('Total: ', total);
+
+// const numbers = [1, 5, 8, 9, 12, 4, 15, 27, 30, 18, 11];
+// let total = 0;
+// for (const number of numbers) {
+//     if (number % 2 === 0) {
+//         total += number;
+//     }
+// }
+// console.log('Total: ', total);
+
+
+// ==================================================================
+/*
+ * Напиши скрипт поиска логина
+ * - Если логина нет, вывести сообщение 'Пользователь [логин] не найден.'
+ * - Если нашли логин, вывести сообщение 'Пользователь [логин] найден.'
+ *
+ * - Сначала через for
+ * - Потом через for...of
+ * - Логика break
+ * - Метод includes() с тернарным оператором
+ */
+
+// const logins = ['m4ngoDoge', 'k1widab3st', 'poly1scute', 'aj4xth3m4n'];
+// const loginToFind = 'poly1scute';
+// let message = ' ';
+// for (let i = 0; i < logins.length; i += 1) {
+//     const login = logins[i];
+//     if (login === loginToFind) {
+//         message = `Пользователь ${loginToFind} найден.`;
+//         break;
+//     } 
+//     message = `Пользователь ${loginToFind} не найден.`;          
+// }
+// console.log(message);
+
+// const logins = ['m4ngoDoge', 'k1widab3st', 'poly1scute', 'aj4xth3m4n'];
+// const loginToFind = 'poly1scute';
+// let message = ' ';
+// for (const login of logins) {
+//     if (login === loginToFind) {
+//         message = `Пользователь ${loginToFind} найден.`;
+//         break;
+//     }
+// }
+// console.log(message);
+
+// const logins = ['m4ngoDoge', 'k1widab3st', 'poly1scute', 'aj4xth3m4n'];
+// const loginToFind = 'poly1scute';
+// const message = logins.includes(loginToFind)
+//     ? `Пользователь ${loginToFind} найден.`
+//     : `Пользователь ${loginToFind} не найден.`;
+// console.log(message);
+
+
+// ==============================================================
+/*
+ * Напиши скрипт поиска самого маленького числа в массиве,
+ * при условии что числа уникальные (не повторяются).
+ */
+
+// const numbers = [51, 18, 13, 24, 7, 85, 19];
+// let smallestNumber = numbers[0];
+// for (const number of numbers) {
+//     if (number < smallestNumber) {
+//         smallestNumber = number;
+//     }
+// }
+// console.log(smallestNumber)
+
+
+// ===========================================================
+/*
+ * Напиши скрипт, который объединяет все элементы массива в одно строковое значение.
+ * Элементов может быть произвольное кол-во.
+ * Пусть элементы массива  в строке будут разделены запятой.
+ * - Сначала через for
+ * - Потом через join()
+ */
+
+// const friends = ['Mango', 'Poly', 'Kiwi', 'Ajax'];
+// let string = friends.join(', ');
+// console.log(string);
+
+
+// ==========================================================
+/*
+ * Напиши скрипт который заменяет регистр каждого символа в строке на противоположный.
+ * Например, если строка «JavaScript», то на выходе должена быть строка «jAVAsCRIPT».
+ */
+
+// const string = 'JavaScript';
+// const letters = string.split('');
+// let invertedString = '';
+// for (const letter of letters) {
+//     if (letter === letter.toLowerCase()) {
+//         invertedString += letter.toUpperCase();
+//     } else {
+//         invertedString += letter.toLowerCase();
+//     }
+// }
+// console.log(invertedString);
+
+// const string = 'JavaScript';
+// const letters = string.split('');
+// let invertedString = '';
+// for (const letter of letters) {
+//     invertedString +=
+//         letter === letter.toLowerCase()
+//             ? letter.toUpperCase()
+//             : letter.toLowerCase();
+// }
+// console.log(invertedString);
+
+
+// ===================================================================
+/*
+ * Делаем slug в URL из названия статьи (например на dev.to)
+ * Заголовок статьи состоит только из букв и пробелов
+ *
+ * - Нормализируем строку
+ * - Разбиваем по словам
+ * - Сшиваем в строку с разделителями
+ */
+
+// Должно получиться top-10-benefits-of-react-framework
+// const title = 'Top 10 benefits of React framework';
+// const normalizedTitle = title.toLowerCase();
+// const words = normalizedTitle.split(' ');
+// const slug = words.join('-');
+// console.log(slug);
+
+// const title = 'Top 10 benefits of React framework';
+// const slugTwo = title.toLowerCase().split(' ').join('-');
+// console.log(slugTwo);
+
+
+// ========================================================
+/*
+ * Напиши скрипт который считает сумму элементов двух массивов.
+ */
+
+// const array1 = [5, 10, 15, 20];
+// const array2 = [10, 20, 30];
+// let total = 0;
+// const numbers = array1.concat(array2);
+// for (const number of numbers) {
+//     total += number;
+// }
+// console.log(total);
+
+
+// ============================================================
+/*
+ * Работем с коллекцией карточек в trello
+ * - Метод splice()
+ * - Удалить
+ * - Добавить
+ * - Обновить
+ */
+
+// const cards = [
+//   'Карточка-1',
+//   'Карточка-2',
+//   'Карточка-3',
+//   'Карточка-4',
+//   'Карточка-5',
+// ];
+// const cardToRemove = 'Карточка-3';
+// const index = cards.indexOf(cardToRemove);
+// cards.splice(index, 1);
+// const cardsToInsert = 'Карточка-6';
+// cards.splice(3, 0, cardsToInsert);
+// const cardsToUpdate = 'Карточка-4';
+// const indexToUpdate = cards.indexOf(cardsToUpdate);
+// const cardsNew = 'Карточка-7';
+// cards.splice(indexToUpdate, 1, cardsNew);
+// console.log(cards);
+
+
+// ====================================================
+/*
+ * Напиши функцию calculateTotalPrice(items)
+ * которая принимает массив цен (чисел) и возвращает их сумму
+ */
+// const calculateTotalPrice = function (items) {
+//     let total = 0;
+//     for (const item of items) {
+//         total += item;
+//     }
+//     return total;
+// };
+// console.log(calculateTotalPrice([54, 28, 105, 70, 92, 17, 120, 12, 25, 90,]));
+
+
+// ===============================================================
+/*
+ * Напиши функцию logItems(items) для перебора и логирования массива
+ */
+// const logItems = function (items) {
+//     for (const item of items) {
+//         console.log(item);
+//     }
+// }
+// logItems(['Mango', 'Poly', 'Kiwi', 'Ajax']);
+
+
+// ==============================================================
+/*
+ * Напиши функцию findLogin(allLogins, login) для поиска логина
+ * - Если логина нет, вывести сообщение 'Пользователь [логин] не найден.'
+ * - Если нашли логин, вывести сообщение 'Пользователь [логин] найден.'
+ */
+
+// const logins = ['m4ngoDoge', 'k1widab3st', 'poly1scute', 'aj4xth3m4n'];
+// const findLogin = function (allLogins, loginToFind) {    
+//     for (const login of allLogins) {
+//         if (login === loginToFind) {
+//             return `Пользователь ${loginToFind} найден.`
+//         }
+//     }
+//     return `Пользователь ${loginToFind} не найден.`;
+// }
+// console.log(findLogin(logins, 'poly1scute'))
+
+// const logins = ['m4ngoDoge', 'k1widab3st', 'poly1scute', 'aj4xth3m4n'];
+// const findLogin = function (allLogins, loginToFind) {
+//     return allLogins.includes(loginToFind)
+//         ? `Пользователь ${loginToFind} найден.`
+//         : `Пользователь ${loginToFind} не найден.`;
+// }
+// console.log(findLogin(logins, 'poly1scute'))

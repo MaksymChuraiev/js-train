@@ -12,7 +12,7 @@
 // function testBlock() {
 //     let myAge = 18;
 //     console.log(myAge);
-    
+
 // }
 
 // testBlock();
@@ -371,6 +371,17 @@
 
 
 // ===================== Function ==========================
+
+// const add = function (a, b) {
+//     console.log(a);
+//     console.log(b);
+//     // const result = a + b;
+//     // console.log('a + b:', result);
+//     console.log('Show function add');
+//     return a + b;
+// }
+// console.log(add(23, 2))
+
 
 // function getSum() {
 //     let numOne, numTwo;
@@ -790,12 +801,12 @@
 // const promptResult = prompt('Who are you?');
 // console.log(promptResult);
 
-const htmlElement = document.documentElement;
-const headElement = document.head;
-const bodyElement = document.body;
-console.log(htmlElement);
-console.log(headElement);
-console.log(bodyElement);
+// const htmlElement = document.documentElement;
+// const headElement = document.head;
+// const bodyElement = document.body;
+// console.log(htmlElement);
+// console.log(headElement);
+// console.log(bodyElement);
 
 // const bodyElement = document.body;
 // const firstChildNode = bodyElement.firstChild;
