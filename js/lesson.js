@@ -425,3 +425,75 @@
 // console.log(filterNumbers([1, 2, 3, 4, 5], 10, 15, 2, 3, 8)); // [2, 3]
 // console.log(filterNumbers([10, 15, 25, 30], 23, 30, 18, 15)); // [30, 15]
 // console.log(filterNumbers([100, 200, 300, 400, 500], 7, 12, 200, 64)); // [200]
+
+
+// const fruits = ['apple', 'plum', 'pear', 'orange'];
+
+// for (let i = 0; i < fruits.length; i += 1) { // Change this line
+//   const fruit = fruits[i]; // Change this line
+//   console.log(fruit);
+// }
+
+// function createArrayOfNumbers(min, max) {
+//   const numbers = [];
+//   // Change code below this line
+//     let total = 0;
+//     for (let i = min; i <= max; i += 1) {
+//         numbers.push(i);
+//     }
+//   // Change code above this line
+//   return numbers;
+// }
+// console.log(createArrayOfNumbers(14, 17));
+
+// function filterArray(numbers, value) {
+//     let newNumbers = [];
+//     for (const num of numbers) {
+//         if (num > value) {
+//             newNumbers.push(num);
+//         }
+//     }    
+//  return newNumbers;
+// }
+// console.log(filterArray([1, 2, 3, 4, 5], 3));
+// // filterArray([1, 2, 3, 4, 5], 3)
+
+
+// function getCommonElements(array1, array2) {   
+//     const uniqueElements = [];
+//     for (const element of array1) {
+//         if (array2.includes(element)) {
+//             uniqueElements.push(element);
+//         }
+//     }
+//     return uniqueElements;
+// };
+// console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]))
+
+
+// function getEvenNumbers(start, end) {
+//    // Change code below this line
+//     let arr = [];
+//     for (let i = start; i <= end; i += 1) {
+//         if (i % 2 === 0) {
+//             arr.push(i);
+//         }
+//     }
+//     return arr
+//     // Change code above this line
+// }
+//   console.log(getEvenNumbers(6, 12))
+
+function includes(array, value) {
+  // Change code below this line
+for (const word of array) {
+    if (word === value) {
+        return true;
+    } else if(word !== value) {
+        return false;
+    }
+    
+}
+  // Change code above this line
+}
+console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter"))
