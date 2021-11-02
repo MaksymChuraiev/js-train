@@ -412,7 +412,6 @@
  * - Функция должна вернуть новый массив, в котором будут только те аргументы, начиная со второго,
  *   для которых есть аналог в оригинальном массиве.
  */
-
 // const filterNumbers = function (array, ...args) {
 //     const uniqueElements = [];
 //     for (const element of array) {
@@ -428,11 +427,11 @@
 
 
 // const fruits = ['apple', 'plum', 'pear', 'orange'];
-
 // for (let i = 0; i < fruits.length; i += 1) { // Change this line
 //   const fruit = fruits[i]; // Change this line
 //   console.log(fruit);
 // }
+
 
 // function createArrayOfNumbers(min, max) {
 //   const numbers = [];
@@ -445,6 +444,7 @@
 //   return numbers;
 // }
 // console.log(createArrayOfNumbers(14, 17));
+
 
 // function filterArray(numbers, value) {
 //     let newNumbers = [];
@@ -484,16 +484,16 @@
 // }
 //   console.log(getEvenNumbers(6, 12))
 
-function includes(array, value) {
-  // Change code below this line
-for (const word of array) {
-    if (word === value) {
-        return true;
-    } else if(word !== value) {
-        return false;
-    }
-    
-}
-  // Change code above this line
-}
-console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter"))
+
+// function includes(array, value) {
+//   // Change code below this line
+// for (const word of array) {
+//     if (word === value) {
+//         return true;
+//     } else if(word !== value) {
+//         return false;
+//     }    
+// }
+//   // Change code above this line
+// }
+// console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter"))
