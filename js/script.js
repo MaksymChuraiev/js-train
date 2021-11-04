@@ -1,13 +1,10 @@
-'use strict'
+'use strict';
 // console.log("я учу JS");
 
 // let myLifeStyle = 'freelance'
 // console.log(myLifeStyle)
 
-
-
 // ---------============-----область видимости---==========------
-
 
 // function testBlock() {
 //     let myAge = 18;
@@ -17,8 +14,6 @@
 
 // testBlock();
 // console.log(myAge);
-
-
 
 //  ------=============----константа и изменение её-----=======------
 
@@ -33,8 +28,6 @@
 // userProfile.age = 18;
 // console.log(userProfile);
 
-
-
 // -------==================----вар, отличие---------==================-----
 
 // age = 35;
@@ -46,8 +39,6 @@
 // }
 
 // console.log(sizeVar);
-
-
 
 // =================== Number ==========================
 // const someNum = 1e6; //1000000
@@ -87,8 +78,6 @@
 // let numOne = Math.ceil(5.8);  //Округляется в большую сторону.
 // console.log(numOne);
 
-
-
 // ----------=============--Typeof------------================-----
 
 // let userName;
@@ -112,11 +101,9 @@
 // userName = Symbol('id');
 // console.log(typeof userName);
 
-// userName = function name(params) {    
+// userName = function name(params) {
 // }
 // console.log(typeof userName);
-
-
 
 // ---------==========-------Строковое преобразование-------=======-
 
@@ -129,7 +116,6 @@
 // console.log(userAge);
 // console.log(typeof userAge);
 
-
 // let userTrue = true;
 // console.log(userTrue);
 // console.log(typeof userTrue);
@@ -138,7 +124,6 @@
 
 // console.log(userTrue);
 // console.log(typeof userTrue);
-
 
 // let userAge = '58';
 // console.log(userAge);
@@ -149,7 +134,6 @@
 // console.log(userAge);
 // console.log(typeof userAge);
 
-
 // let userAge = 58;
 // console.log(userAge);
 // console.log(typeof userAge);
@@ -158,8 +142,6 @@
 
 // console.log(userAge);
 // console.log(typeof userAge);
-
-
 
 // ==========================Operators=======================
 
@@ -230,8 +212,6 @@
 // users *= 2;
 // console.log(users);
 
-
-
 // ============== Логический оператор || ИЛИ ,&& И================
 
 // let userName = '';
@@ -252,8 +232,6 @@
 
 // console.log(!false && 11 || 18 && !'');
 
-
-
 // ==========================IF==================================
 
 // let message = 'freelancer';
@@ -261,7 +239,7 @@
 //     console.log(message);
 // }
 
-// if (2 > 1) console.log(message); 
+// if (2 > 1) console.log(message);
 
 // let message = 'freelancer';
 // let number = 0;
@@ -275,9 +253,7 @@
 //     console.log('> 1');
 // } else  {
 //     console.log(message);
-// } 
-
-
+// }
 
 // ===============================  ?  =======================
 
@@ -295,8 +271,6 @@
 // message += messageEnd;
 // console.log(message);
 
-
-
 // ===================== While ===================
 
 // let num = 0;
@@ -311,32 +285,26 @@
 //     num += 1;
 // } while (num < 5);
 
-
-
 // ============================ For =================
 
 // for (let num = 0; num < 5; num += 1) {
-//     console.log(num);    
+//     console.log(num);
 // }
 
 // let num = 0;
 // for (; num < 5;) {
 //     console.log(num);
-//     num += 1;    
+//     num += 1;
 // }
-
-
 
 // =========================== Break ====================
 
 // let num = 0;
 // for (; num < 5; num += 1) {
 //     console.log(num);
-//     if (num == 2) break;    
+//     if (num == 2) break;
 // }
 // console.log(`off, num = ${num}`)
-
-
 
 // ======================== Continue ==================
 
@@ -345,8 +313,6 @@
 //     if (num == 2) continue;
 //     console.log(num);
 // }
-
-
 
 // ================== FirstFor =========================
 
@@ -368,8 +334,6 @@
 //     }
 // }
 
-
-
 // ===================== Function ==========================
 
 // const add = function (a, b) {
@@ -382,11 +346,10 @@
 // }
 // console.log(add(23, 2))
 
-
 // function getSum() {
 //     let numOne, numTwo;
 //     function getNumOne() {
-//         numOne = 1;        
+//         numOne = 1;
 //     }
 //     function getNumTwo() {
 //         numTwo = 2;
@@ -399,7 +362,6 @@
 // getSum();
 // getSum();
 // getSum();
-
 
 // let message;
 // function showMessage() {
@@ -453,9 +415,6 @@
 // console.log(new UserInfo('Vasil'));
 // console.log(new UserInfo('Stas'));
 
-
-
-
 // ================== Object ---------====================
 
 // let userInfo = {
@@ -507,7 +466,7 @@
 //     }
 // };
 // if ('name' in userInfo) {
-//    console.log(userInfo.name); 
+//    console.log(userInfo.name);
 // }
 
 // let userInfo = {
@@ -536,12 +495,10 @@
 //     },
 //     showInfo() {
 //     // console.log(`${userInfo.name}, ${userInfo.age} year. Address: c.${userInfo.address.city}, str.${userInfo.address.street}.`);
-//        console.log(`${this.name}, ${this.age} year. Address: c.${this.address.city}, str.${this.address.street}.`); 
+//        console.log(`${this.name}, ${this.age} year. Address: c.${this.address.city}, str.${this.address.street}.`);
 // }
 // }
 // userInfo.showInfo();
-
-
 
 // =================== Спецсимвол ====================
 
@@ -590,11 +547,6 @@
 // console.log(text.slice(-5, -1));
 // console.log(text.slice(1));
 
-
-
-
-
-
 // ====================== Massive =======================
 
 // ======================Добавляет в начало =============
@@ -604,7 +556,6 @@
 // console.log(arr);
 // arr.unshift('Dima', 'Fedor',);
 // console.log(arr);
-
 
 // ====================== Добавляет в конец  ==============
 
@@ -789,7 +740,6 @@
 //     return item + previousValue;
 // }, 0);
 // console.log(reduceValueOne);
-
 
 // =========================== DOM ==================================
 
