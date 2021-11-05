@@ -5,6 +5,210 @@
 // console.log(user);
 
 // ==============================================================
+// const apartment = {
+//   descr: 'Spacious apartment in the city center',
+//   rating: 4,
+//   price: 2153,
+// };
+// const keys = [];
+// const values = [];
+// // Change code below this line
+// for (const key in apartment) {
+//   keys.push(key);
+//   value.push(apartment[key]);
+// }
+
+// =============================================================
+
+// const colors = [
+//   { hex: '#f44336', rgb: '244,67,54' },
+//   { hex: '#2196f3', rgb: '33,150,243' },
+//   { hex: '#4caf50', rgb: '76,175,80' },
+//   { hex: '#ffeb3b', rgb: '255,235,59' },
+// ];
+
+// const hexColors = [];
+// const rgbColors = [];
+// for (const color of colors) {
+//   hexColors.push(color.hex);
+//   rgbColors.push(color.rgb);
+// }
+
+// ===================================================================
+// const products = [
+//   { name: 'Radar', price: 1300, quantity: 4 },
+//   { name: 'Scanner', price: 2700, quantity: 3 },
+//   { name: 'Droid', price: 400, quantity: 7 },
+//   { name: 'Grip', price: 1200, quantity: 9 },
+// ];
+
+// function getProductPrice(productName) {
+// for (const product of products) {
+//   if (product.name === productName) {
+//     return product.price;
+//   }
+// }
+// return null;
+// }
+// getProductPrice('Scanner');
+// getProductPrice('Radar');
+
+// ========================================================================
+// const products = [
+//   { name: 'Radar', price: 1300, quantity: 4 },
+//   { name: 'Scanner', price: 2700, quantity: 3 },
+//   { name: 'Droid', price: 400, quantity: 7 },
+//   { name: 'Grip', price: 1200, quantity: 9 },
+// ];
+
+// function getAllPropValues(propName) {
+//   const arr = [];
+//   for (const product of products) {
+//     if (product.hasOwnProperty(propName)) {
+//       arr.push(product[propName]);
+//     }
+//   }
+//   return arr;
+// }
+// getAllPropValues('name');
+
+// =================================================================
+// const forecast = {
+//   today: {
+//     low: 28,
+//     high: 32,
+//     icon: 'https://www.flaticon.com/svg/static/icons/svg/861/861059.svg',
+//   },
+//   tomorrow: {
+//     low: 27,
+//     high: 31,
+//   },
+// };
+// // Change code below this line
+// const {
+//   today: { high: highToday, low: lowToday, icon: todayIcon },
+//   tomorrow: {
+//     high: highTomorrow,
+//     low: lowTomorrow,
+//     icon: tomorrowIcon = 'https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg',
+//   },
+// } = forecast;
+// console.log(todayIcon);
+
+// ======================================================================
+// function makeTask(data) {
+//   const completed = false;
+//   const category = 'General';
+//   const priority = 'Normal';
+//   // Change code below this line
+//   const object = { category, priority, completed, ...data };
+//   return object;
+
+//   // Change code above this line
+// }
+// console.log(makeTask({ category: 'Finance', text: 'Take interest' }));
+
+// ======================================================================
+// function add(...args) {
+//   let total = 0;
+//   for (const arg of args) {
+//     total += arg;
+//   }
+//   return total;
+// }
+// console.log(add(74, 11, 62, 46, 12, 36));
+
+// =============================================================
+// function findMatches(array, ...args) {
+//   const matches = []; // Don't change this line
+//   for (const arg of args) {
+//     if (array.includes(arg)) {
+//       matches.push(arg);
+//     }
+//   }
+//   // Change code above this line
+//   return matches;
+// }
+
+// ==============================================================
+// const bookShelf = {
+//   books: ['The last kingdom', 'Haze', 'The guardian of dreams'],
+//   updateBook(oldName, newName) {
+//     // Change code below this line
+//     const idx = this.books.indexOf(oldName);
+//     this.books.splice(idx, 1, newName);
+
+//     // Change code above this line
+//   },
+// };
+
+// =================================================================
+// const atTheOldToad = {
+//   potions: [
+//     { name: 'Speed potion', price: 460 },
+//     { name: 'Dragon breath', price: 780 },
+//     { name: 'Stone skin', price: 520 },
+//   ],
+
+//   getPotions() {
+//     return this.potions;
+//   },
+
+//   addPotion(newPotion) {
+//     const message = `Error! Potion ${newPotion.name} is already in your inventory!`;
+//     for (const potion of this.potions) {
+//       if (newPotion.name === potion.name) {
+//         return message;
+//       }
+//     }
+
+//     this.potions.push(newPotion);
+//   },
+
+//   removePotion(potionName) {
+//     for (const potion of this.potions) {
+//       const idx = this.potions.indexOf(potion);
+
+//       if (potion.name === potionName) {
+//         this.potions.splice(idx, 1);
+//       }
+//     }
+
+//     return `Potion ${potionName} is not in inventory!`;
+//   },
+
+//   updatePotionName(oldName, newName) {
+//     for (const potion of this.potions) {
+//       const idx = this.potions.indexOf(potion);
+
+//       if (potion.name === oldName) {
+//         potion.name = newName;
+//       }
+//     }
+
+//     return `Potion ${oldName} is not in inventory!`;
+//   },
+// };
+// atTheOldToad.addPotion({ name: 'Invisibility', price: 620 });
+// atTheOldToad.addPotion({ name: 'Power potion', price: 270 });
+// atTheOldToad.addPotion({ name: 'Dragon breath', price: 700 });
+// atTheOldToad.addPotion({ name: 'Stone skin', price: 240 });
+// atTheOldToad.removePotion('Dragon breath');
+// atTheOldToad.updatePotionName('Dragon breath', 'Polymorth');
+// console.log(atTheOldToad.getPotions());
+// =================================================================
+// const atTheOldToad = {
+//   potions: ['Speed potion', 'Dragon breath', 'Stone skin'],
+//   removePotion(potionName) {
+//     // Change code below this line
+//     const idx = this.potions.indexOf(potionName);
+//     this.books.splice(idx, 1);
+
+//     // Change code above this line
+//   },
+// };
+// atTheOldToad.removePotion('Dragon breath');
+// =================================================================
 // const totalMinutes = 450;
 
 // const hours = Math.floor(totalMinutes / 60);
