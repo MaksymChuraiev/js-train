@@ -4,9 +4,62 @@
 // let user = userName;
 // console.log(user);
 
+// ===============================================================
+//1. Write function, which iterates over array and executes function on each element.
+
+// const executeforEach = (arr, callback) => {
+//   arr.forEach((el) => callback(el));
+// };
+
+// executeforEach([1, 2, 3], function (el) {
+//   console.log(el * 2);
+// }); // 2 4 6
+
+// const iterates = (arr, factor) => arr.map((num) => num * factor);
+// console.log(iterates([1, 2, 3], 2));
+
+// ================================================================
+//2. Write function, which returns transformed array based on function, which passed as a second parameter (callback). If array contains a number as string, it should convert it and return as number. You're allowed to change a body of that callback function if you need. Reuse function from task 1.
+
+// const mapArray = (arr, callback) => {
+//   arr.forEach((el) => callback(Number(el)));
+// };
+
+// mapArray([2, '5', 8], function (el) {
+//   return el + 3;
+// }); // returns [5, 8, 11]
+
+// const sum = (arr, addition) => arr.map((num) => Number(num) + addition);
+// console.log(sum([2, '5', 8], 3));
+
+// ======================================================================
+//3. Write function, which returns filtered array based on function,
+//which passed as a parameter.Reuse function from task 1.
+
+// const filterArray = (arr, callback) => {
+//   arr.forEach((el) => callback(el));
+// };
+// filterArray([2, 5, 8], function (el) {
+//   return el % 2 === 0;
+// });
+
+// returns [2, 8]
+
+// ===========================================================
+
+// 4. Write a function that accepts an array of object and returns new array of values by passed key name.
+// That function should not change the original array. Reuse function from task 1.
+
+const fruits = [
+  { name: 'apple', weight: 0.5 },
+  { name: 'pineapple', weight: 2 },
+];
+
+getArrayOfKeys(fruits, 'name');
+// returns ['apple', 'pineapple']
 // ==============================================================
 // const apartment = {
-//   descr: 'Spacious apartment in the city center',
+// descr: 'Spacious apartment in the city center',
 //   rating: 4,
 //   price: 2153,
 // };
@@ -265,78 +318,78 @@
 //   users.filter((user) => user.age > minAge && user.age < maxAge);
 
 // ===========================================================================
-const users = [
-  {
-    name: 'Moore Hensley',
-    email: 'moorehensley@indexia.com',
-    eyeColor: 'blue',
-    friends: ['Sharron Pace'],
-    isActive: false,
-    balance: 2811,
-    gender: 'male',
-    age: 37,
-  },
-  {
-    name: 'Sharlene Bush',
-    email: 'sharlenebush@tubesys.com',
-    eyeColor: 'blue',
-    friends: ['Briana Decker', 'Sharron Pace'],
-    isActive: true,
-    balance: 3821,
-    gender: 'female',
-    age: 34,
-  },
-  {
-    name: 'Ross Vazquez',
-    email: 'rossvazquez@xinware.com',
-    eyeColor: 'green',
-    friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
-    isActive: false,
-    balance: 3793,
-    gender: 'male',
-    age: 24,
-  },
-  {
-    name: 'Elma Head',
-    email: 'elmahead@omatom.com',
-    eyeColor: 'green',
-    friends: ['Goldie Gentry', 'Aisha Tran'],
-    isActive: true,
-    balance: 2278,
-    gender: 'female',
-    age: 21,
-  },
-  {
-    name: 'Carey Barr',
-    email: 'careybarr@nurali.com',
-    eyeColor: 'blue',
-    friends: ['Jordan Sampson', 'Eddie Strong'],
-    isActive: true,
-    balance: 3951,
-    gender: 'male',
-    age: 27,
-  },
-  {
-    name: 'Blackburn Dotson',
-    email: 'blackburndotson@furnigeer.com',
-    eyeColor: 'brown',
-    friends: ['Jacklyn Lucas', 'Linda Chapman'],
-    isActive: false,
-    balance: 1498,
-    gender: 'male',
-    age: 38,
-  },
-  {
-    name: 'Sheree Anthony',
-    email: 'shereeanthony@kog.com',
-    eyeColor: 'brown',
-    friends: ['Goldie Gentry', 'Briana Decker'],
-    isActive: true,
-    balance: 2764,
-    gender: 'female',
-    age: 39,
-  },
-];
+// const users = [
+//   {
+//     name: 'Moore Hensley',
+//     email: 'moorehensley@indexia.com',
+//     eyeColor: 'blue',
+//     friends: ['Sharron Pace'],
+//     isActive: false,
+//     balance: 2811,
+//     gender: 'male',
+//     age: 37,
+//   },
+//   {
+//     name: 'Sharlene Bush',
+//     email: 'sharlenebush@tubesys.com',
+//     eyeColor: 'blue',
+//     friends: ['Briana Decker', 'Sharron Pace'],
+//     isActive: true,
+//     balance: 3821,
+//     gender: 'female',
+//     age: 34,
+//   },
+//   {
+//     name: 'Ross Vazquez',
+//     email: 'rossvazquez@xinware.com',
+//     eyeColor: 'green',
+//     friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+//     isActive: false,
+//     balance: 3793,
+//     gender: 'male',
+//     age: 24,
+//   },
+//   {
+//     name: 'Elma Head',
+//     email: 'elmahead@omatom.com',
+//     eyeColor: 'green',
+//     friends: ['Goldie Gentry', 'Aisha Tran'],
+//     isActive: true,
+//     balance: 2278,
+//     gender: 'female',
+//     age: 21,
+//   },
+//   {
+//     name: 'Carey Barr',
+//     email: 'careybarr@nurali.com',
+//     eyeColor: 'blue',
+//     friends: ['Jordan Sampson', 'Eddie Strong'],
+//     isActive: true,
+//     balance: 3951,
+//     gender: 'male',
+//     age: 27,
+//   },
+//   {
+//     name: 'Blackburn Dotson',
+//     email: 'blackburndotson@furnigeer.com',
+//     eyeColor: 'brown',
+//     friends: ['Jacklyn Lucas', 'Linda Chapman'],
+//     isActive: false,
+//     balance: 1498,
+//     gender: 'male',
+//     age: 38,
+//   },
+//   {
+//     name: 'Sheree Anthony',
+//     email: 'shereeanthony@kog.com',
+//     eyeColor: 'brown',
+//     friends: ['Goldie Gentry', 'Briana Decker'],
+//     isActive: true,
+//     balance: 2764,
+//     gender: 'female',
+//     age: 39,
+//   },
+// ];
 
 // const getUsersWithFriend = (users, friendName) =>
 //   users.filter((user) => user.friends.includes(friendName));
