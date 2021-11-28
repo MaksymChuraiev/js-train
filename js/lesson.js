@@ -4,6 +4,17 @@
 // let user = userName;
 // console.log(user);
 
+// ===================================================
+// function checkForSpam(message) {
+//   let result;
+//   // Change code below this line
+//   result =
+//     message.toLowerCase().includes('spam') ||
+//     message.toLowerCase().includes('sale');
+//   // Change code above this line
+//   return result;
+// }
+// console.log(checkForSpam('Latest technology news'));
 // ===============================================================
 //1. Write function, which iterates over array and executes function on each element.
 
@@ -402,7 +413,7 @@
 //   // Change code above this line
 // }
 
-// ================================================================================
+// =======================================================================
 // class Car {
 //   #price;
 //   static MAX_PRICE = 50000;
@@ -1567,6 +1578,130 @@
 // }
 // getAllPropValues('name');
 
+// ================================================================
+// function countProps(object) {
+//   let propCount = 0;
+//   // Change code below this line
+
+//   for (const key in object) {
+//     if (object.hasOwnProperty(key)) {
+//       const arr = [];
+
+//       propCount += arr.push(key);
+//     }
+//   }
+//   // Change code above this line
+//   return propCount;
+// }
+// console.log(countProps({ mail: 'poly@mail.com', isOnline: true, score: 500 }));
+
+// ==================================================================
+// const apartment = {
+//   descr: 'Spacious apartment in the city center',
+//   rating: 4,
+//   price: 2153,
+// };
+// const values = [];
+// // Change code below this line
+// const keys = Object.keys(apartment);
+// for (const key of keys) {
+//   values.push(apartment[key]);
+// }
+// console.log(keys);
+// console.log(values);
+
+// =================================================================
+// function countTotalSalary(salaries) {
+//   let totalSalary = 0;
+//   // Change code below this line
+//   const values = Object.values(salaries);
+//   for (const value of values) {
+//     totalSalary += value;
+//   }
+//   // Change code above this line
+//   return totalSalary;
+// }
+// console.log(countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 }));
+
+// ==============================================================
+// const colors = [
+//   { hex: '#f44336', rgb: '244,67,54' },
+//   { hex: '#2196f3', rgb: '33,150,243' },
+//   { hex: '#4caf50', rgb: '76,175,80' },
+//   { hex: '#ffeb3b', rgb: '255,235,59' },
+// ];
+
+// const hexColors = [];
+// const rgbColors = [];
+// // Change code below this line
+// for (const color of colors) {
+//   // const colorHex = Object.keys(color);
+//   const colorRgb = Object.values(color);
+//   hexColors.push(colorRgb[0]);
+//   rgbColors.push(colorRgb[1]);
+// }
+// console.log(rgbColors);
+
+// ===============================================================
+// const products = [
+//   { name: 'Radar', price: 1300, quantity: 4 },
+//   { name: 'Scanner', price: 2700, quantity: 3 },
+//   { name: 'Droid', price: 400, quantity: 7 },
+//   { name: 'Grip', price: 1200, quantity: 9 },
+// ];
+
+// function getProductPrice(productName) {
+//   // Change code below this line
+//   for (const product of products) {
+//     if (product.name === productName) {
+//       return product.price;
+//     }
+//   }
+//   return 'nul';
+//   // Change code above this line
+// }
+// console.log(getProductPrice('Scanner'));
+
+// ================================================================
+// const products = [
+//   { name: 'Radar', price: 1300, quantity: 4 },
+//   { name: 'Scanner', price: 2700, quantity: 3 },
+//   { name: 'Droid', price: 400, quantity: 7 },
+//   { name: 'Grip', price: 1200, quantity: 9 },
+// ];
+
+// function getAllPropValues(propName) {
+//   // Change code below this line
+//   const arr = [];
+
+//   for (const product of products) {
+//     arr.push(product[propName]);
+//   }
+//   return arr;
+//   // Change code above this line
+// }
+// console.log(getAllPropValues('name'));
+
+// =================================================================
+// const products = [
+//   { name: 'Radar', price: 1300, quantity: 4 },
+//   { name: 'Scanner', price: 2700, quantity: 3 },
+//   { name: 'Droid', price: 400, quantity: 7 },
+//   { name: 'Grip', price: 1200, quantity: 9 },
+// ];
+
+// function calculateTotalPrice(productName) {
+//   // Пиши код ниже этой строки
+//   let total = 0;
+//   for (const product of products) {
+//     if (product.name === productName) {
+//       total = product.price * product.quantity;
+//     }
+//   }
+//   return total;
+//   // Пиши код выше этой строки
+// }
+// console.log(calculateTotalPrice('Grip'));
 // =================================================================
 // const forecast = {
 //   today: {
@@ -1650,15 +1785,15 @@
 //   },
 
 //   addPotion(newPotion) {
-//     const message = `Error! Potion ${newPotion.name} is already in your inventory!`;
-//     for (const potion of this.potions) {
-//       if (newPotion.name === potion.name) {
-//         return message;
-//       }
-//     }
+// const message = `Error! Potion ${newPotion.name} is already in your inventory!`;
+// for (const potion of this.potions) {
+//   if (newPotion.name === potion.name) {
+//     return message;
+//   }
+// }
 
-//     this.potions.push(newPotion);
-//   },
+// this.potions.push(newPotion);
+// },
 
 //   removePotion(potionName) {
 //     for (const potion of this.potions) {
@@ -1692,6 +1827,56 @@
 // atTheOldToad.updatePotionName('Dragon breath', 'Polymorth');
 // console.log(atTheOldToad.getPotions());
 // =================================================================
+// const atTheOldToad = {
+//   potions: [
+//     { name: 'Speed potion', price: 460 },
+//     { name: 'Dragon breath', price: 780 },
+//     { name: 'Stone skin', price: 520 },
+//   ],
+//   // Change code below this line
+//   getPotions() {
+//     return this.potions;
+//   },
+//   addPotion(newPotion) {
+//     const message = `Error! Potion ${newPotion.name} is already in your inventory!`;
+//     for (const potion of this.potions) {
+//       if (newPotion.name === potion.name) {
+//         return message;
+//       }
+//     }
+
+//     this.potions.push(newPotion);
+//   },
+//   removePotion(potionName) {
+//     for (const potion of this.potions) {
+//       const index = this.potions.indexOf(potion);
+
+//       if (potion.name === potionName) {
+//         this.potions.splice(index, 1);
+//       }
+//     }
+//     return `Potion ${potionName} is not in inventory!`;
+//   },
+//   updatePotionName(oldName, newName) {
+//     for (const potion of this.potions) {
+//       if (potion.name === oldName) {
+//         potion.name = newName;
+//       }
+//     }
+//     return `Potion ${oldName} is not in inventory!`;
+
+//   },
+// Change code above this line
+// };
+// console.log(atTheOldToad.addPotion({ name: 'Invisibility', price: 620 }));
+// console.log(atTheOldToad.addPotion({ name: 'Power potion', price: 270 }));
+// console.log(atTheOldToad.addPotion({ name: 'Dragon breath', price: 700 }));
+// console.log(atTheOldToad.addPotion({ name: 'Stone skin', price: 240 }));
+
+// atTheOldToad.removePotion('Dragon breath');
+// atTheOldToad.updatePotionName('Dragon breath', 'Polymorth');
+// console.log(atTheOldToad.getPotions());
+// =====================================================================
 // const atTheOldToad = {
 //   potions: ['Speed potion', 'Dragon breath', 'Stone skin'],
 //   removePotion(potionName) {
